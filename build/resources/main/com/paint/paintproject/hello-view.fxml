@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.paint.paintproject.PaintController">
+   <children>
+      <FlowPane prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <MenuBar prefWidth="1280.0" style="-fx-background-color: #000000; -fx-opacity: 0.75;">
+              <menus>
+                <Menu mnemonicParsing="false" text="File">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Close" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Delete" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="About" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+            <BorderPane prefHeight="695.0" prefWidth="1280.0" style="-fx-background-color: #000000; -fx-opacity: 0.7;">
+               <top>
+                  <Pane prefHeight="40.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox prefHeight="40.0" prefWidth="1280.0">
+                           <children>
+                              <Button fx:id="buttonBrush" mnemonicParsing="false" text="Button">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <ColorPicker fx:id="colorPicker">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="5.0" />
+                                 </HBox.margin>
+                              </ColorPicker>
+                              <TextField fx:id="bsize">
+                                 <HBox.margin>
+                                    <Insets left="20.0" top="5.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <Separator prefHeight="40.0" prefWidth="790.0" visible="false">
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Separator>
+                              <Button fx:id="chooseBrush" mnemonicParsing="false" prefHeight="25.0" prefWidth="66.0" text="Button">
+                                 <HBox.margin>
+                                    <Insets right="20.0" top="5.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children></Pane>
+               </top>
+               <left>
+                  <Pane prefHeight="425.0" prefWidth="70.0" BorderPane.alignment="CENTER" />
+               </left>
+               <center>
+                  <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFFFFF;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Canvas fx:id="canvas" height="615.0" width="1140.0" />
+                     </children>
+                  </Pane>
+               </center>
+               <right>
+                  <Pane prefHeight="585.0" prefWidth="70.0" BorderPane.alignment="CENTER" />
+               </right>
+               <bottom>
+                  <Pane prefHeight="40.0" prefWidth="1280.0" BorderPane.alignment="CENTER" />
+               </bottom>
+            </BorderPane>
+         </children>
+      </FlowPane>
+      <Pane fx:id="brushList" layoutX="920.0" layoutY="65.0" prefHeight="655.0" prefWidth="360.0" scaleZ="2.0" style="-fx-background-color: #5e5c5c;" visible="false">
+         <rotationAxis>
+            <Point3D z="2.0" />
+         </rotationAxis>
+      </Pane>
+   </children>
+</Pane>
